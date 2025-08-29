@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+   <head> <link rel="icon" href="https://i0.wp.com/goworkship.com/magazine/wp-content/uploads/2019/10/Amazon-logo-history-5-557x400.jpg?resize=557%2C400&ssl=1" type="image/png">
+
+ <title>Amazonサインイン</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-box {
+      background-color: #fff;
+      padding: 30px;
+      border: 1px solid #ddd;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .login-box h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #111;
+    }
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .login-box button {
+      width: 100%;
+      padding: 10px;
+      background-color: #f0c14b;
+      border: 1px solid #a88734;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .login-box button:hover {
+      background-color: #e2b33c;
+    }
+    .error {
+      color: red;
+      font-size: 12px;
+      margin-bottom: 10px;
+      display: none;
+    }
+    .help-links, .terms {
+      font-size: 12px;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .help-links a, .terms a {
+      color: #0066c0;
+      text-decoration: none;
+    }
+    .help-links a:hover, .terms a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+   <img src=" https://m.media-amazon.com/images/G/01/digital/PV_Logo_Landscape_Smile_Centred_Dark_Squid_Ink_RGB_150._CB554671110_.png" alt="Amazonロゴ" class="login-logo"> <h2>サインイン</h2>
+    <form id="loginForm">
+      <input type="text" id="email" placeholder="メールアドレスまたは携帯番号">
+      <input type="password" id="password" placeholder="パスワード">
+      <div class="error" id="errorMessage">両方の項目を入力してください。</div>
+      <button type="submit">サインイン</button>
+    </form>
+
+    <div class="help-links">
+      <p>
+        <a href="https://amazon.co.jp/ap/forgotpassword?showRememberMe=true&openid.pape.max_auth_age=0&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&siteState=357-5795671-7514255&webAuthnChallengeIdForAutofill=lPi33O6Oa31OSXfYE-ax27A6eX8ypkaJ%3AFE&webAuthnGetParametersForAutofill=eyJycElkIjoiYW1hem9uLmNvLmpwIiwiY2hhbGxlbmdlIjoibFBpMzNPNk9hMzFPU1hmWUUtYXgyN0E2ZVg4eXBrYUoiLCJ0aW1lb3V0Ijo5MDAwMDAsIm1lZGlhdGlvbiI6ImNvbmRpdGlvbmFsIiwidXNlclZlcmlmaWNhdGlvbiI6InByZWZlcnJlZCJ9&language=ja_JP&pageId=amzn_prime_video_ww&openid.return_to=https%3A%2F%2Ffe.primevideo.com%2F-%2Fja%2Fauth%2Freturn%2Fref%3Dav_auth_ap%3F_t%3D1sg6mc614eCsxfplTnGTbrg1d6JRjc6l7rxuYT67disU0CAAAAAQAAAABosVHRcmF3AAAAAPgWC9WfHH8iB-olH_E9xQ%26language%3Dja%26location%3D%2F-%2Fja%2Foffers%2Fnonprimehomepage%3Fref_%253Ddv_web_force_root%2526language%253Dja&prevRID=RR82SNB4AG3MMKGR1JES&openid.assoc_handle=amzn_prime_video_sso_jp&openid.mode=checkid_setup&prepopulatedLoginId=&failedSignInCount=0&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&shouldShowPersistentLabels=true" target="_blank" rel="noopener noreferrer">
+          お困りですか？
+        </a>
+      </p>
+    </div>
+
+    <div class="terms">
+      続行することで、Amazonの  
+      <a href="https://amazon.co.jp/gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM" target="_blank" rel="noopener noreferrer">
+        利用規約
+      </a> および  
+      <a href="https://amazon.co.jp/gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM" target="_blank" rel="noopener noreferrer">
+        プライバシー規約
+      </a> に同意したものとみなされます。
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const error = document.getElementById("errorMessage");
+
+      if (!email || !password) {
+        e.preventDefault();
+        http://error.style.display = "block";
+      } else {
+        http://error.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
